@@ -21,11 +21,11 @@ public class EndToEnd_Journey extends SetUp {
 	@Test(priority = 1, dataProviderClass = Data_Provider.class, dataProvider = "get_mobile_number")
 	public void get_quote(String mobile_number) throws Exception
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn_custom quote_btn']")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn_sticky_mobile btn_custom quote_btn custum_common_btn']")));
 	    WebElement Mobile_Number_Field = driver.findElement(By.xpath("//input[@id='mobile_no']"));
         Mobile_Number_Field.sendKeys(mobile_number);
         Thread.sleep(1000);
-        WebElement Calculate_Premium_btn = driver.findElement(By.xpath("//button[@class='btn_custom quote_btn']"));
+        WebElement Calculate_Premium_btn = driver.findElement(By.xpath("//button[@class='btn_sticky_mobile btn_custom quote_btn custum_common_btn']"));
         Calculate_Premium_btn.click();
 	}
 	
@@ -69,9 +69,8 @@ public class EndToEnd_Journey extends SetUp {
 			Thread.sleep(500);
 		}
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='btn_custom step2_continue']")));
-		
-		WebElement btn = driver.findElement(By.xpath("//a[@class='btn_custom step2_continue']"));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn_sticky_mobile btn_custom step2_continue custum_common_btn']")));
+		WebElement btn = driver.findElement(By.xpath("//button[@class='btn_sticky_mobile btn_custom step2_continue custum_common_btn']"));
 		btn.click();
 	}
 	
@@ -80,7 +79,7 @@ public class EndToEnd_Journey extends SetUp {
 	public void members_age_section(String Self, String Spouse, String Son, String Daughter) throws Exception 
 	{
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='btn_custom step3_continue']")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn_sticky_mobile btn_custom step3_continue custum_common_btn']")));
 				
 		if(Self != null)
 		{
@@ -106,7 +105,7 @@ public class EndToEnd_Journey extends SetUp {
 			Thread.sleep(500);
 		}
 				
-		driver.findElement(By.xpath("//a[@class='btn_custom step3_continue']")).click();
+		driver.findElement(By.xpath("//button[@class='btn_sticky_mobile btn_custom step3_continue custum_common_btn']")).click();
 	}
 
 
@@ -118,8 +117,8 @@ public class EndToEnd_Journey extends SetUp {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='pincode_search']")));
 		driver.findElement(By.xpath("//input[@id='pincode_search']")).sendKeys(pin_code);
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='success_icon_span pin_code_success_icon_span']//img")));
-		driver.findElement(By.xpath("//a[@class='btn_custom view_quote']")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='material-icons success_icon_span pin_code_success_icon_span']")));
+		driver.findElement(By.xpath("//button[@class='btn_sticky_mobile btn_custom view_quote custum_common_btn']")).click();
 
 		Thread.sleep(5000);
 	}
@@ -140,7 +139,8 @@ public class EndToEnd_Journey extends SetUp {
 	{
 		driver.manage().window().fullscreen();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Continue with detailed form to pay']")));
-		driver.findElement(By.xpath("//a[text()='Continue with detailed form to pay']")).click();
+		WebElement btn = driver.findElement(By.xpath("//a[text()='Continue with detailed form to pay']"));
+		btn.click();
 	}
 	
 	

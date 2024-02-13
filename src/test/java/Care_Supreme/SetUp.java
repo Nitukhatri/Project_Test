@@ -15,10 +15,6 @@ public class SetUp {
 	{
 		driver.get("https://www.careinsurance.com/product/care-supreme");
 		driver.manage().window().fullscreen();
-	}
-	 datademo d = new datademo("oiuytrertyuiuytre");
-	 datademo d1 = new datademo("oiuytrertyuiuytre",876543);
-	 datademo d3 = new datademo("String 2");
-	 datademo d4 = new datademo("String 3");	 
+	}	 
 	 
 }
