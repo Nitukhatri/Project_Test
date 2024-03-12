@@ -3,11 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Care_Supreme.datademo">
+      <class name="Care_Supreme.EndToEnd_Journey">
         <methods>
-          <include name="test4" invocation-numbers="0"/>
+          <include name="health_deatil"/>
+          <include name="members_age_section"/>
+          <include name="get_quote"/>
+          <include name="pincode"/>
+          <include name="proposal_details"/>
+          <include name="Confirm_proposal_page"/>
+          <include name="Member_Selection" invocation-numbers="0"/>
+          <include name="buy_now"/>
+          <include name="KYC_Verification_PAN"/>
+          <include name="Insured_Member_Detail_Page"/>
+          <include name="Proposal_Summery"/>
         </methods>
-      </class> <!-- Care_Supreme.datademo -->
+      </class> <!-- Care_Supreme.EndToEnd_Journey -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

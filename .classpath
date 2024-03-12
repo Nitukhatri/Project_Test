@@ -34,9 +34,13 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Testing Selenium Course/Selenium/4.Selenium RC - Remote Control  - 1_0 -API Deprecated/selenium-server-4.17.0.jar"/>
+	<classpathentry kind="lib" path="D:/Testing/JAR/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="D:/Testing Selenium Course/Selenium/4.Selenium RC - Remote Control  - 1_0 -API Deprecated/selenium-server-standalone-3.141.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

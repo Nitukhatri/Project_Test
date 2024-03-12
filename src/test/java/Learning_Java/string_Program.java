@@ -4,9 +4,16 @@ import java.util.Arrays;
 
 public class string_Program {
 
+	public static int number = 9090;
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		variables v = new variables();
+		System.out.println(v.a);
+		System.out.println(v.b);
+		
 		program1();
 		System.out.println("--------------------------------");
 		program2();
@@ -50,6 +57,7 @@ public class string_Program {
 		}
 			System.out.println(str1 + str2);
 
+			
 	}
 
 	// String program to print Even length words in a String

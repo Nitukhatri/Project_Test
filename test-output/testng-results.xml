@@ -1,44 +1,406 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="2" failed="1" skipped="9">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-06T20:50:26 IST" name="Default suite" finished-at="2024-02-06T20:50:27 IST" duration-ms="117">
+  <suite started-at="2024-02-13T17:43:20 IST" name="Default suite" finished-at="2024-02-13T17:43:25 IST" duration-ms="4725">
     <groups>
     </groups>
-    <test started-at="2024-02-06T20:50:26 IST" name="Default test" finished-at="2024-02-06T20:50:27 IST" duration-ms="117">
-      <class name="Care_Supreme.datademo">
-        <test-method signature="test1()[pri:1, instance:Care_Supreme.datademo@15eb5ee5]" started-at="2024-02-06T20:50:26 IST" name="test1" finished-at="2024-02-06T20:50:26 IST" duration-ms="22" status="PASS">
+    <test started-at="2024-02-13T17:43:20 IST" name="Default test" finished-at="2024-02-13T17:43:25 IST" duration-ms="4725">
+      <class name="Care_Supreme.EndToEnd_Journey">
+        <test-method signature="SetUp()[pri:0, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:20 IST" name="SetUp" finished-at="2024-02-13T17:43:22 IST" duration-ms="1954" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:2, instance:Care_Supreme.datademo@15eb5ee5]" started-at="2024-02-06T20:50:26 IST" name="test2" finished-at="2024-02-06T20:50:26 IST" depends-on-methods="Care_Supreme.datademo.test1" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method signature="test5()[pri:3, instance:Care_Supreme.datademo@15eb5ee5]" started-at="2024-02-06T20:50:27 IST" name="test5" finished-at="2024-02-06T20:50:27 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test5 -->
-        <test-method signature="test6()[pri:4, instance:Care_Supreme.datademo@15eb5ee5]" started-at="2024-02-06T20:50:27 IST" name="test6" finished-at="2024-02-06T20:50:27 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test6 -->
-        <test-method signature="test3()[pri:5, instance:Care_Supreme.datademo@15eb5ee5]" started-at="2024-02-06T20:50:27 IST" name="test3" finished-at="2024-02-06T20:50:27 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-        <test-method signature="test4(java.lang.String)[pri:6, instance:Care_Supreme.datademo@15eb5ee5]" started-at="2024-02-06T20:50:27 IST" name="test4" data-provider="getdata" finished-at="2024-02-06T20:50:27 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- SetUp -->
+        <test-method signature="get_quote(java.lang.String)[pri:1, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:22 IST" name="get_quote" data-provider="get_mobile_number" finished-at="2024-02-13T17:43:23 IST" duration-ms="1417" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Data provider ka data]]>
+                <![CDATA[9876543210]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test4 -->
-      </class> <!-- Care_Supreme.datademo -->
+        </test-method> <!-- get_quote -->
+        <test-method signature="Member_Selection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:23 IST" name="Member_Selection" data-provider="member_selection" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.get_quote" duration-ms="1259" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[self]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[spouse]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[son]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[daughter]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <label for="self">...</label> is not clickable at point (670, 407). Other element would receive the click: <button type="button" class="btn_sticky_mobile btn_custom step2_continue custum_common_btn" onclick="validateMembers();">...</button>
+  (Session info: chrome=121.0.6167.161)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [baa34bf03d19921c017bf0774f207eff, clickElement {id=552B164B20B633C09242814C68FCECCA_element_166}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\ACER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:11063}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:11063/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (baa34bf03d19921c017bf0774f207eff)] -> xpath: //label[@for='self']]
+Session ID: baa34bf03d19921c017bf0774f207eff]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <label for="self">...</label> is not clickable at point (670, 407). Other element would receive the click: <button type="button" class="btn_sticky_mobile btn_custom step2_continue custum_common_btn" onclick="validateMembers();">...</button>
+  (Session info: chrome=121.0.6167.161)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [baa34bf03d19921c017bf0774f207eff, clickElement {id=552B164B20B633C09242814C68FCECCA_element_166}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\ACER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:11063}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:11063/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (baa34bf03d19921c017bf0774f207eff)] -> xpath: //label[@for='self']]
+Session ID: baa34bf03d19921c017bf0774f207eff
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at Care_Supreme.EndToEnd_Journey.Member_Selection(EndToEnd_Journey.java:44)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Member_Selection -->
+        <test-method signature="members_age_section(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="members_age_section" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.Member_Selection" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.members_age_section(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.members_age_section(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- members_age_section -->
+        <test-method signature="pincode(java.lang.String)[pri:4, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="pincode" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.members_age_section" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.pincode(java.lang.String)[pri:4, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.pincode(java.lang.String)[pri:4, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pincode -->
+        <test-method signature="buy_now()[pri:5, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="buy_now" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.pincode" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.buy_now()[pri:5, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.buy_now()[pri:5, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buy_now -->
+        <test-method signature="Confirm_proposal_page()[pri:6, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="Confirm_proposal_page" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.buy_now" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.Confirm_proposal_page()[pri:6, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.Confirm_proposal_page()[pri:6, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Confirm_proposal_page -->
+        <test-method signature="KYC_Verification_PAN()[pri:7, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="KYC_Verification_PAN" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.Confirm_proposal_page" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.KYC_Verification_PAN()[pri:7, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.KYC_Verification_PAN()[pri:7, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KYC_Verification_PAN -->
+        <test-method signature="proposal_details()[pri:8, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="proposal_details" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.KYC_Verification_PAN" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.proposal_details()[pri:8, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.proposal_details()[pri:8, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- proposal_details -->
+        <test-method signature="Insured_Member_Detail_Page(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="Insured_Member_Detail_Page" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.proposal_details" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.Insured_Member_Detail_Page(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.Insured_Member_Detail_Page(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:10, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Insured_Member_Detail_Page -->
+        <test-method signature="health_deatil()[pri:11, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="health_deatil" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.Insured_Member_Detail_Page" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.health_deatil()[pri:11, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.health_deatil()[pri:11, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- health_deatil -->
+        <test-method signature="Proposal_Summery()[pri:12, instance:Care_Supreme.EndToEnd_Journey@76f7d241]" started-at="2024-02-13T17:43:25 IST" name="Proposal_Summery" finished-at="2024-02-13T17:43:25 IST" depends-on-methods="Care_Supreme.EndToEnd_Journey.health_deatil" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EndToEnd_Journey.Proposal_Summery()[pri:12, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EndToEnd_Journey.Proposal_Summery()[pri:12, instance:Care_Supreme.EndToEnd_Journey@76f7d241] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Proposal_Summery -->
+      </class> <!-- Care_Supreme.EndToEnd_Journey -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
